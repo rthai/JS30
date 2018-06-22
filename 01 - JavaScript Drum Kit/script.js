@@ -8,4 +8,12 @@ var playSound = function(e) {
   audio.play();
 };
 
+var removeTransition = function(e) {
+  if (e.propertyName !== 'transform') return;
+  this.classList.remove('playing');
+}
+
+const keys = Array.from(document.querySelectorAll('.key')); //gives you a nodelist that looks like an array
+keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+
 window.addEventListener('keydown', playSound);
