@@ -20,11 +20,17 @@ body {
   height: 100%;
   transform: translateY(-3px);
 }
-
 .hand {
   width: 50%;
   height: 6px;
   top: 50%;
   background: black;
   position: absolute;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: ease-in-out;
+}
+.sec-hand {
+  background: red;
 }
