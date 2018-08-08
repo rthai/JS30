@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  min-height: 100vh;
+}
+.clock {
+  height: 20rem;
+  width: 20rem;
+  margin: 50px auto;
+  border-radius: 50%;
+  border: 20px solid navy;
+  position: relative;
+  padding: 2rem;
+}
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px);
+}
+
+.hand {
+  width: 50%;
+  height: 6px;
+  top: 50%;
+  background: black;
+  position: absolute;
+}
