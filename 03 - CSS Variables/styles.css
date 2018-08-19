@@ -1,0 +1,22 @@
+:root {
+  --base: red;
+  --spacing: 10px;
+  --blur: 10px;
+}
+
+html {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body {
+  text-align: center;
+}
+
+.hl {
+  color: var(--base);
+}
+
+img {
+  padding: var(--spacing);
+  background: var(--base);
+  filter: blur(var(--blur));
+}
