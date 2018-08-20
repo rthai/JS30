@@ -4,17 +4,18 @@
   --blur: 10px;
 }
 
-html {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
 body {
   text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.5rem;
 }
 
 .hl {
   color: var(--base);
 }
-
+.controls {
+  margin-bottom: 50px;
+}
 img {
   padding: var(--spacing);
   background: var(--base);
