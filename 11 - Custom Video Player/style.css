@@ -54,6 +54,12 @@ body {
   max-width:50px;
 }
 
+svg {
+  fill: white;
+  line-height: 1;
+  max-width: 15px;
+}
+
 .player__button:focus {
   border-color: #ffc600;
 }
