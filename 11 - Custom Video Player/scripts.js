@@ -42,7 +42,18 @@ var scrub = function(e) {
 }
 
 var toggleFullscreen = function() {
-
+  // only works with chrome, did not test firefox
+  if (player.webkitRequestFullScreen) { 
+    player.webkitRequestFullScreen();
+  } else if (player.mozRequestFullScreen) {
+    player.mozRequestFullScreen();
+  }
+    
+  if (document.webkitCancelFullScreen) {
+    document.webkitCancelFullScreen();
+  } else if (document.mozCancelFullScreen) {
+    document.mozCancelFullScreen();
+  }
 };
 
 /* hook up event listeners */
@@ -63,5 +74,4 @@ progress.addEventListener('mousemove', (e) => mousedown && scrub(e));
 progress.addEventListener('mousedown', () => mousedown = true);
 progress.addEventListener('mouseup', () => mousedown = false);
 
-// TODO: fullscreen button mode
 fullscreen.addEventListener('click', toggleFullscreen);
