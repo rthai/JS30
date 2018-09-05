@@ -76,3 +76,22 @@
       outline:0;
       border:1px solid rgba(0,0,0,0.1);
     }
+
+    .btns {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      text-align: center;
+    }
+    .btn {
+      flex: 1;
+      margin: 5px;
+      border: 0;
+      background: 0;
+      font-size: 0.5rem;
+    }
+    .btn:hover {
+      text-decoration: underline;
+    }
+    
