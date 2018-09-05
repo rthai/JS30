@@ -13,7 +13,17 @@
     const players = ['Wes', 'Sarah', 'Ryan', 'Poppy'];
 
     // and we want to make a copy of it.
+    const copy1 = players.slice();
+    const copy2 = [].concat(players);
+    const copy3 = [...players];
+    const copy4 = Array.from(players);
 
+    console.log('1', copy1);
+    console.log('2', copy2);
+    console.log('3', copy3);
+    console.log('4', copy4);
+    
+  
     // You might think we can just do something like this:
 
     // however what happens when we update that array?
@@ -43,13 +53,37 @@
     };
 
     // and think we make a copy:
-
+    const pCopy1 = Object.assign({}, person, {gender: 'M'});
+    console.log('assign', pCopy1);
+    
     // how do we take a copy instead?
 
     // We will hopefully soon see the object ...spread
-
+    const pCopy2 = {...person} // shallow copy
+    console.log('es6 spread', pCopy2);
     // Things to note - this is only 1 level deep - both for Arrays and Objects. lodash has a cloneDeep method, but you should think twice before using it.
+    const dev = {
+      name: 'Wes Bos',
+      age: 100,
+      social: {
+        twitter: '@wesbos',
+        gmail: '@gmail'
+      }
+    }
 
+    const dev1 = Object.assign({}, dev);
+    console.log('dev', dev);
+    console.log('dev1', dev1);
+    dev1.social.twitter = '@wb'
+    console.log('dev', dev.social); // bc shallow copy, dev.social (2 level deep) is still a ref to dev
+    console.log('dev1', dev1.social);
+    
+    /* lazy copy */
+    const dev2 = JSON.parse(JSON.stringify(dev));
+    console.log('json', dev2);
+    dev2.social.twitter = '@js30'
+    console.log('dev1', dev1.social);
+    console.log('dev2', dev2.social);
   </script>
 
 </body>
