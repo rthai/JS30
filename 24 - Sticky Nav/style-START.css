@@ -63,6 +63,10 @@ nav li {
   align-items: center;
 }
 
+body.fixed-nav nav {
+  position: fixed;
+}
+
 li.logo {
   max-width:0;
   overflow: hidden;
@@ -70,6 +74,10 @@ li.logo {
   transition: all .5s;
   font-weight: 600;
   font-size: 30px;
+}
+
+.fixed-nav li.logo {
+  max-width: 300px;
 }
 
 li.logo a {
